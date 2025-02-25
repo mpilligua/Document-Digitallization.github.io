@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Document Digitalization</title>
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="./static/images/icon.png" type="image/x-icon" />
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body" style="padding-bottom: 0;">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title">AI Document Digitalization</h1>
+        <div class="is-size-5 publication-authors">
+          <div class="author-block"><a href="https://mpilligua.github.io">Maria Pilligua</a><sup>1,2,⭐</sup></div>
+          <div class="author-block"><a href="">Nil Biescas</a><sup>1,2,⭐</sup></div>
+          <div class="author-block"><a href="">Xavi Soto</a><sup>2,⭐</sup></div>
+          <div class="author-block"><a href="">Laia Vilardell</a><sup>2</sup></div>
+          <div class="author-block"><a href="">Jordi Longaron</a><sup>2</sup></div>
+        </div>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup>1</sup>Computer Vision Center,</span>
+          <span class="author-block"><sup>2</sup>Autonomous University of Barcelona,</span>
+          <span class="author-block"><sup>⭐</sup>Equal Contribution</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="padding-bottom:30px">
+    <p class="section">Pipeline</p>
+    <p>Our work focuses on converting complex physical documents into an editable digital format. The figure below outlines our pipeline, which separates textual and graphical elements before processing them.</p>
+    <img src="./static/images/pipeline.png" width="940" alt="Pipeline Diagram" style="margin-top:10px">
+  </div>
+
+  <div class="container" style="padding-bottom:30px">
+    <p class="section">Dataset Creation</p>
+    <p>To train our models, we created a dataset composed of real and synthetic documents. The synthetic dataset enables robust learning by simulating various real-world document conditions.</p>
+    <img src="./static/images/creation_ds.png" width="940" alt="Dataset Creation" style="margin-top:30px">
+    <p>Examples from our synthetic dataset include variations in lighting, added graphical elements, and text obfuscation to mimic real documents.</p>
+    <img src="./static/images/examples_ds.png" width="940" alt="Dataset Examples" style="margin-top:30px">
+  </div>
+
+  <div class="container" style="padding-bottom:30px">
+    <p class="section">LayeredDoc</p>
+    <p>We implemented LayeredDoc to separate textual and graphical elements from scanned documents. This allows better processing by OCR and object detection models.</p>
+    <img src="./static/images/inference_layereddoc.png" width="940" alt="LayeredDoc Inference" style="margin-top:30px">
+  </div>
+
+  <div class="container" style="padding-bottom:30px">
+    <p class="section">DocTR (OCR)</p>
+    <p>To extract text from the document, we used DocTR, a state-of-the-art OCR model that detects and recognizes text with high accuracy.</p>
+    <img src="./static/images/doctr.png" width="940" alt="OCR Results" style="margin-top:30px">
+  </div>
+  
+  <div class="container" style="padding-bottom:30px">
+    <p class="section">Table Structure Recognition</p>
+    <p>For table detection and structure extraction, we used TATR, a model trained to identify and correctly format tables within a document.</p>
+    <img src="./static/images/tatr.png" height="940" alt="Table Structure Recognition" style="margin-top:30px">
+  </div>
+  
+  <div class="container" style="padding-bottom:30px">
+    <p class="section">Inference of the Whole Pipeline</p>
+    <p>Here is an example of a complete document processed through our pipeline, integrating all models to generate an editable output.</p>
+    <img src="./static/images/example_pipeline.png" width="940" alt="Final Pipeline Example" style="margin-top:30px">
+  </div>
+
+  <div class="container" style="padding-bottom:30px">
+    <p class="section">Demo Video</p>
+    <p>A demonstration of how to use our web application will be shown here.</p>
+    <div style="width: 100%; text-align: center; padding-top: 20px;">
+      <video controls width="940">
+        <source src="./static/videos/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</body>
+</html>
