@@ -1,1 +1,0 @@
-# HyperNVD Web Page
